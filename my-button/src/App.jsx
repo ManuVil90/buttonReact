@@ -11,14 +11,23 @@ function App() {
     setMensaje(nuevoMensaje);
     const nuevoBotonTexto = nuevoMensaje === "Apagado" ? "Encender" : "Apagar";
     setBotonTexto(nuevoBotonTexto);
-};
-  const botonClase = mensaje === "Apagado" ? "boton-verde" : "boton-rojo";
+  };
+  const botonClase = mensaje === "Apagado" ? "btn btn-outline-success" : "btn btn-outline-danger";
 
   return (
-    <div className="App">
-      <h1>Estado del Botón</h1>
-      <button className={botonClase} onClick={cambiarEstado}>{botonTexto}</button>
-      <p>Estado: {botonTexto}</p>
+    <div class="container text-center">
+      <div class="row align-items-start">
+        <div class="col">
+        </div>
+        <div class="col">
+          <div className="container">
+            <h1>Estado del Botón</h1>
+            <button type="button" className={botonClase} onClick={cambiarEstado}>{botonTexto}</button>
+          </div>
+        </div>
+        <div class="col">
+        </div>
+      </div>
     </div>
   );
 }
